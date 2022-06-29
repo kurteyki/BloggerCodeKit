@@ -1,0 +1,12 @@
+<b:widget id='BloggerButton1' locked='false' title='' type='BloggerButton' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='button'>https://resources.blogblog.com/html/buttons/blogger-ipower-kahki.gif</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<div class='widget-content'>
+			<a href='https://www.blogger.com' rel='nofollow'>
+				<img alt='Powered by Blogger' expr:src='data:source' expr:srcset='data:srcset' width='128'/>
+			</a>
+		</div>
+	</b:includable>
+</b:widget>

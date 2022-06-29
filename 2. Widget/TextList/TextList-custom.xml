@@ -1,0 +1,16 @@
+<b:widget id='TextList1' locked='false' title='TextList' type='TextList' version='2' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='shownum'/>
+		<b:widget-setting name='sorting'>ALPHABETICAL</b:widget-setting>
+		<b:widget-setting name='item-2'>item-2</b:widget-setting>
+		<b:widget-setting name='item-1'>item-1</b:widget-setting>
+		<b:widget-setting name='item-0'>item-0</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<data:title/>
+		<b:loop values='data:items' var='item'>
+			<data:item/>
+		</b:loop>
+	</b:includable>
+	<b:includable id='content'/>
+</b:widget>

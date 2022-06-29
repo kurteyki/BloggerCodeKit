@@ -1,0 +1,54 @@
+<b:widget id='PopularPosts1' locked='false' title='PopularPosts' type='PopularPosts' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+		<b:widget-setting name='showThumbnails'>true</b:widget-setting>
+		<b:widget-setting name='showSnippets'>true</b:widget-setting>
+		<b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main' var='this'>
+		<b:loop values='data:posts' var='post'>
+			<a expr:href='data:post.url'>
+				<b:eval expr='data:post.title ? data:post.title : data:messages.noTitle'/>
+			</a>
+			<b:if cond='data:postDisplay.showFeaturedImage'>
+				<img class="xxx" loading="lazy" expr:src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' expr:alt="data:post.title"/>
+			</b:if>
+			<data:post.author.name/>
+			<data:post.date/>
+			<b:if cond='data:postDisplay.showSnippet'>
+				<b:eval expr='data:post.snippets.long snippet { length: 150, links: false, linebreaks: false, ellipsis: false }'/>
+			</b:if>
+		</b:loop>
+	</b:includable>   
+	<b:includable id='blogThisShare'/>
+	<b:includable id='bylineByName'/>
+	<b:includable id='bylineRegion'/>
+	<b:includable id='commentsLink'/>
+	<b:includable id='commentsLinkIframe'/>
+	<b:includable id='emailPostIcon'/>
+	<b:includable id='facebookShare'/>
+	<b:includable id='footerBylines'/>
+	<b:includable id='googlePlusShare'/>
+	<b:includable id='headerByline'/>
+	<b:includable id='linkShare'/>
+	<b:includable id='otherSharingButton'/>
+	<b:includable id='platformShare'/>
+	<b:includable id='postAuthor'/>
+	<b:includable id='postCommentsLink'/>
+	<b:includable id='postJumpLink'/>
+	<b:includable id='postLabels'/>
+	<b:includable id='postLocation'/>
+	<b:includable id='postReactions'/>
+	<b:includable id='postShareButtons'/>
+	<b:includable id='postTimestamp'/>
+	<b:includable id='sharingButton'/>
+	<b:includable id='sharingButtonContent'/>
+	<b:includable id='sharingButtons'/>
+	<b:includable id='sharingButtonsMenu'/>
+	<b:includable id='sharingPlatformIcon'/>
+	<b:includable id='snippetedPostByline'/>
+	<b:includable id='snippetedPostContent'/>
+	<b:includable id='snippetedPostThumbnail'/>
+	<b:includable id='snippetedPostTitle'/>
+	<b:includable id='snippetedPosts'/>
+</b:widget> 

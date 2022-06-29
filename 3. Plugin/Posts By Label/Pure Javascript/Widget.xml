@@ -1,0 +1,22 @@
+<b:section cond='data:view.isPost and !data:view.isPreview' id='ElementerPostLabel' showaddelement='no'>
+   <b:widget id='Label3' locked='true' title='Post By Label' type='Label' version='2' visible='true'>
+      <b:widget-settings>
+         <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+         <b:widget-setting name='display'>LIST</b:widget-setting>
+         <b:widget-setting name='selectedLabelsList'>Panduan Blog</b:widget-setting>
+         <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+         <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+     </b:widget-settings>
+     <b:includable id='main'>
+         <b:loop values='data:labels limit 1' var='label'>
+            <h3 class='title'><data:label.name/></h3>
+            <div class='widget-content'>
+               <script expr:src='&quot;/feeds/posts/summary/-/&quot; + data:label.name + &quot;?orderby=updated&amp;alt=json-in-script&amp;callback=postbylabel&amp;max-results=3&quot;' type='text/javascript'/>
+           </div>
+       </b:loop>
+   </b:includable>
+   <b:includable id='cloud'/>
+   <b:includable id='content'/>
+   <b:includable id='list'/>
+</b:widget>
+</b:section>

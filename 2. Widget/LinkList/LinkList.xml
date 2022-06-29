@@ -1,0 +1,20 @@
+<b:widget id='LinkList1' locked='false' title='LinkList' type='LinkList' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='sorting'>NONE</b:widget-setting>
+		<b:widget-setting name='text-0'>Google</b:widget-setting>
+		<b:widget-setting name='link-0'>https://google.com/</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<b:include name='widget-title'/>
+		<b:include name='content'/>
+	</b:includable>
+	<b:includable id='content'>
+		<div class='widget-content'>
+			<ul>
+				<b:loop values='data:links' var='link'>
+					<li><a expr:href='data:link.target'><data:link.name/></a></li>
+				</b:loop>
+			</ul>
+		</div>
+	</b:includable>
+</b:widget>

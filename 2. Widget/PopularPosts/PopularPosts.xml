@@ -1,0 +1,14 @@
+<b:widget id='PopularPosts1' locked='false' title='PopularPosts' type='PopularPosts' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+		<b:widget-setting name='showThumbnails'>true</b:widget-setting>
+		<b:widget-setting name='showSnippets'>true</b:widget-setting>
+		<b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main' var='this'>
+		<b:include name='widget-title'/>
+		<div class='widget-content'>
+			<b:include name='snippetedPosts'/>
+		</div>
+	</b:includable>
+</b:widget>

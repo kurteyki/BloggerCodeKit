@@ -1,0 +1,50 @@
+<style>
+#ContactForm1_contact-form-name, #ContactForm1_contact-form-email {
+	text-indent: 10px;
+	height: auto;
+	margin: 5px 0;
+	background: #f2f2f2;
+	border: 1px solid #ccc;
+	color: #777;
+	height: 40px;
+	width: 100%
+}
+#ContactForm1_contact-form-email-message {
+	padding: 10px;
+	background: #f2f2f2;
+	border: 1px solid #ccc;
+	color: #777;
+	min-width: 100%
+}
+#ContactForm1_contact-form-submit {
+	width: 100px;
+	height: 35px;
+	float: left;
+	color: #FFF;
+	padding: 0;
+	cursor: pointer;
+	background: #ddd;
+	border: 1px solid #333;
+	border-radius: 3px;
+}
+</style>
+
+<form class="form-contact">
+	<div>
+		<label for="name">Name</label>
+		<input id="ContactForm1_contact-form-name" name="name" type="text" value="" />
+	</div>
+	<div>
+		<label for="name">Email Address:</label>
+		<input id="ContactForm1_contact-form-email" name="name" type="text" value="" />
+	</div>
+	<div>
+		<label for="textarea">Message:</label>
+		<textarea id="ContactForm1_contact-form-email-message" name="textarea" rows='8'></textarea>
+	</div>
+	<input id="ContactForm1_contact-form-submit" type="button" value="Submit" />
+	<div id="ContactForm1_contact-form-error-message">
+	</div>
+	<div id="ContactForm1_contact-form-success-message">
+	</div>
+</form>

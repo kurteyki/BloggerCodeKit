@@ -1,0 +1,6 @@
+<b:if cond='data:this.allBylineItems.timestamp'>
+ <data:post.lastUpdated/>
+</b:if>
+
+<!-- with format -->
+<b:eval expr='format(data:post.lastUpdated, "d MMM, YYYY HH:mm aaaa")'/>

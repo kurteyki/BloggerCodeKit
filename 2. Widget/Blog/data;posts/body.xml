@@ -1,0 +1,6 @@
+<data:post.body/>
+
+<!-- class [post-body] for lightbox blogger -->
+<div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id'>
+   <data:post.body/>
+</div>

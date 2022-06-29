@@ -1,0 +1,5 @@
+<!-- long -->
+<b:eval expr='data:post.snippets.long snippet { length: 150, links: false, linebreaks: false, ellipsis: true }'/>
+
+<!-- short -->
+<b:eval expr='data:post.snippets.short snippet { length: 150, links: false, linebreaks: false, ellipsis: true }'/>

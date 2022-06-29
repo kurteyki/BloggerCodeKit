@@ -1,0 +1,27 @@
+<b:widget id='BlogArchive1' locked='true' title='Archive' type='BlogArchive' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+		<b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
+		<b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+		<b:widget-setting name='monthPattern'>MMMM</b:widget-setting>
+		<b:widget-setting name='dayPattern'>MMM dd</b:widget-setting>
+		<b:widget-setting name='weekPattern'>MM/dd</b:widget-setting>
+		<b:widget-setting name='chronological'>false</b:widget-setting>
+		<b:widget-setting name='showPosts'>true</b:widget-setting>
+		<b:widget-setting name='frequency'>MONTHLY</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main' var='this'>
+		<b:loop values='data:data' var='archive'>
+			<a expr:href='data:archive.url'>
+				<b:if cond='data:archive.post-count'>
+					<data:archive.post-count/>
+				</b:if>
+			</a>
+		</b:loop>	
+	</b:includable>
+	<b:includable id='content'/>
+	<b:includable id='flat'/>
+	<b:includable id='hierarchy'/>
+	<b:includable id='interval'/>
+	<b:includable id='posts'/>
+</b:widget>

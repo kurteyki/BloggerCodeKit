@@ -1,0 +1,32 @@
+<b:if cond='data:this.allBylineItems.share AND data:post.shareUrl'>
+    <b:loop values='data:blog.sharing.platforms' var='platform'>
+        <b:if cond='data:platform.key == "link"'>
+            <data:post.url/>
+        </b:if>
+        <b:if cond='data:platform.key == "facebook"'>
+            <a expr:href='data:post.shareUrl + "&amp;target=facebook"' expr:title='data:platform.shareMessage' target='_blank'>
+                <data:platform.name/>
+            </a>
+        </b:if>
+        <b:if cond='data:platform.key == "blogThis"'>
+            <a expr:onclick='"window.open(&amp;quot;https://www.blogger.com/blog-this.g?n=" + data:blog.title + ": " + (data:post.title ? data:post.title : data:messages.noTitle) + "&amp;u=" + data:post.url + "&amp;t=&amp;quot;, &amp;quot;_blank&amp;quot;, &amp;quot;directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=800, height=600&amp;quot;);"' href='javascript:void(0)' expr:title='data:platform.name'>
+                <data:platform.name/>
+            </a>
+        </b:if>
+        <b:if cond='data:platform.key == "twitter"'>
+            <a expr:href='data:post.shareUrl + "&amp;target=twitter"' expr:title='data:platform.shareMessage' target='_blank'>
+                <data:platform.name/>
+            </a>
+        </b:if>                             
+        <b:if cond='data:platform.key == "pinterest"'>
+            <a expr:href='data:post.shareUrl + "&amp;target=pinterest"' expr:title='data:platform.shareMessage' target='_blank'>
+                <data:platform.name/>
+            </a>
+        </b:if>                             
+        <b:if cond='data:platform.key == "email"'>
+            <a expr:href='data:post.shareUrl + "&amp;target=email"' expr:title='data:platform.shareMessage' target='_blank'>
+                <data:platform.name/>
+            </a>
+        </b:if>                             
+    </b:loop>                           
+</b:if>

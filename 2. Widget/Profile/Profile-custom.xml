@@ -1,0 +1,44 @@
+<b:widget id='Profile1' locked='true' title='Profile' type='Profile' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='showaboutme'>true</b:widget-setting>
+		<b:widget-setting name='showlocation'>true</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main' var='this'>
+		<b:if cond='data:team'>
+			<b:loop values='data:authors' var='author'>
+				<a target="_blank" expr:href='data:author.userUrl' rel='author nofollow noopener'>
+					<img class='profile-img' expr:alt='data:messages.myPhoto' expr:height='data:authorPhoto.height' expr:src='data:authorPhoto.image' expr:width='data:authorPhoto.width'/>
+					<data:author.display-name/>
+				</a>
+			</b:loop>
+			<b:else/>
+			<b:if cond='data:authorPhoto.image'>
+				<img expr:alt='data:messages.myPhoto' expr:src='data:authorPhoto.image'/>
+			</b:if>
+			<a target="_blank" expr:href='data:userUrl' rel='author nofollow noopener'>
+				<data:displayname/>
+			</a>
+			<b:if cond='data:location'>
+				<data:location/>
+			</b:if>
+			<b:if cond='data:aboutme'>
+				<data:aboutme/>
+			</b:if>											
+		</b:if>
+	</b:includable>
+	<b:includable id='authorProfileImage'/>										
+	<b:includable id='content'/>
+	<b:includable id='defaultProfileImage'/>
+	<b:includable id='profileImage'/>
+	<b:includable id='teamProfile'/>
+	<b:includable id='teamProfileLink'/>
+	<b:includable id='userGoogleProfile'/>
+	<b:includable id='userLocation'/>
+	<b:includable id='userProfile'/>
+	<b:includable id='userProfileData'/>
+	<b:includable id='userProfileImage'/>
+	<b:includable id='userProfileInfo'/>											
+	<b:includable id='userProfileLink'/>
+	<b:includable id='userProfileText'/>
+	<b:includable id='viewProfileLink'/>
+</b:widget>					

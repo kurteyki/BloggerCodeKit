@@ -1,0 +1,16 @@
+<b:widget id='Feed1' locked='false' title='Feed' type='Feed' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='feedUrl'>https://templatemantul.blogspot.com/feeds/posts/default</b:widget-setting>
+		<b:widget-setting name='openLinksInNewWindow'>true</b:widget-setting>
+		<b:widget-setting name='numItemsShow'>5</b:widget-setting>
+		<b:widget-setting name='showItemDate'>true</b:widget-setting>
+		<b:widget-setting name='showItemAuthor'>true</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<b:comment>must include id for load feed from blogger code</b:comment>
+		<div expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
+			<a expr:href='data:feedUrl'><data:loadingMsg/></a>
+		</div>
+	</b:includable>
+	<b:includable id='content'/>
+</b:widget>

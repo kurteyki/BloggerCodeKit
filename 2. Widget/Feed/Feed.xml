@@ -1,0 +1,20 @@
+<b:widget id='Feed1' locked='false' title='Feed' type='Feed' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='feedUrl'>https://[BLOG_URL].blogspot.com/feeds/posts/default</b:widget-setting>
+		<b:widget-setting name='openLinksInNewWindow'>true</b:widget-setting>
+		<b:widget-setting name='numItemsShow'>5</b:widget-setting>
+		<b:widget-setting name='showItemDate'>true</b:widget-setting>
+		<b:widget-setting name='showItemAuthor'>true</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<b:include name='widget-title'/>
+		<b:include name='content'/>
+	</b:includable>
+	<b:includable id='content'>
+		<div class='widget-content' expr:id='data:widget.instanceId + &quot;_feedItemListDisplay&quot;'>
+			<span style='filter: alpha(25); opacity: 0.25;'>
+				<a expr:href='data:feedUrl'><data:loadingMsg/></a>
+			</span>
+		</div>
+	</b:includable>
+</b:widget>

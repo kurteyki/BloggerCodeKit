@@ -1,0 +1,68 @@
+<b:section showaddelement='true' id="BlogWidget">
+	<b:widget id='Blog1' locked='true' title='Blog Widget' type='Blog' version='2' visible='true'>
+		<b:widget-settings>
+			<b:widget-setting name='showDateHeader'>false</b:widget-setting>
+			<b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+			<b:widget-setting name='showShareButtons'>true</b:widget-setting>
+			<b:widget-setting name='showCommentLink'>true</b:widget-setting>
+			<b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+			<b:widget-setting name='showAuthor'>true</b:widget-setting>
+			<b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+			<b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+			<b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+			<b:widget-setting name='timestampLabel'>Post On :</b:widget-setting>
+			<b:widget-setting name='reactionsLabel'/>
+			<b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+			<b:widget-setting name='style.layout'>1x1</b:widget-setting>
+			<b:widget-setting name='showLabels'>true</b:widget-setting>
+			<b:widget-setting name='showLocation'>false</b:widget-setting>
+			<b:widget-setting name='postLabelsLabel'>Labels :</b:widget-setting>
+			<b:widget-setting name='showTimestamp'>true</b:widget-setting>
+			<b:widget-setting name='postsPerAd'>1</b:widget-setting>
+			<b:widget-setting name='showBacklinks'>false</b:widget-setting>
+			<b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+			<b:widget-setting name='showInlineAds'>true</b:widget-setting>
+			<b:widget-setting name='showReactions'>false</b:widget-setting>
+		</b:widget-settings>				
+		<b:includable id='main' var="this">
+
+			<b:include name='postMessage'/>
+
+			<b:tag id="postIndex" cond="data:view.isMultipleItems" class='post-index list-group w-auto' name="div">
+
+				<b:loop index='x' values="data:posts" var="post">
+					<b:if cond='data:view.isMultipleItems'>
+						<b:include name="postIndex"/>
+					</b:if>
+					<b:if cond='data:view.isSingleItem'>
+						<b:include name="postDetail"/>
+					</b:if>
+				</b:loop>
+
+			</b:tag>								
+
+			<b:include cond='data:view.isMultipleItems' name="postPaginationMultiple"/>
+
+		</b:includable>
+		<b:includable id='postIndex'>
+		</b:includable>
+		<b:includable id='postPaginationMultiple'>
+		</b:includable>
+		<b:includable id='postDetail'>
+		</b:includable>	
+		<b:includable id='postPaginationSingle'>
+		</b:includable>				
+		<b:includable id='postMessage'>
+		</b:includable>
+		<b:includable id='sharePost'>
+		</b:includable>
+		<b:includable id='infoPost'>
+		</b:includable>
+		<b:includable id='authorPost'>
+		</b:includable>
+		<b:includable id='relatedPost'>
+		</b:includable>
+		<b:includable id='commentPost'>							
+		</b:includable>
+	</b:widget>
+</b:section>

@@ -1,0 +1,28 @@
+<!-- showAuthor -->
+
+<b:if cond='data:this.allBylineItems.author'>
+    <data:this.allBylineItems.author.label/>
+    <a target="_blank" rel="noopener nofollow" expr:href='data:post.author.profileUrl'>
+        <data:post.author.name/>
+    </a>
+</b:if>
+
+<!-- showAuthorProfile -->
+
+<b:include cond='data:post.author.aboutMe' name='authorPost'/>
+
+<b:includable id="authorPost">
+    <img expr:src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 60) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt='data:post.author.name'/>    
+    <a target="_blank" rel="noopener nofollow" expr:href='data:post.author.profileUrl'>
+        <data:post.author.name/>
+    </a>
+    <b:if cond='data:post.author.aboutMe'>
+        <data:post.author.aboutMe/>
+    </b:if>
+</b:includable>
+
+
+<!-- catatan 
+biar profile bisa diakses maka harus mencentang 
+Share my profile pada url : https://www.blogger.com/edit-profile.g
+-->

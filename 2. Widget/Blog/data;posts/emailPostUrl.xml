@@ -1,0 +1,6 @@
+<b:if cond='data:post.emailPostUrl'>
+ <img alt='' class='icon-action' height='13' src='https://resources.blogblog.com/img/icon18_email.gif' width='18'/>
+ <a class='byline-email-link' expr:href='data:post.emailPostUrl' expr:title='data:messages.emailPost'>
+  <data:messages.emailPost/>
+ </a>
+</b:if>

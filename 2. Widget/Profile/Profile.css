@@ -1,0 +1,76 @@
+/* Profile */
+.Profile .widget-content.individual {
+ text-align: center;
+ padding: 15px 0;
+ border: 1px solid #efefef;
+ border-top:none;
+}
+.Profile .widget-content.individual .profile-img {
+ border-radius: 50%;
+}
+.Profile .widget-content.individual .profile-name-link {
+ color: #777777;
+ font-size: .9em;
+ opacity: 1;
+ overflow: hidden;
+}
+.Profile .widget-content.individual .profile-name-link:hover {
+ color: #49ACE1;
+}
+.Profile .widget-content.individual .profile-link {
+ border-style: solid;
+ border-width: 1px;
+ cursor: pointer;
+ font-size: 13px;
+ font-weight: 400;
+ padding: 6px 22px;
+ display: inline-block;
+ line-height: normal;
+ border-radius: 4px;
+}
+.Profile .widget-content.individual .g-profile {
+ border: none;
+ color: #333;
+ font-size: 14px;
+ font-weight: 400;
+ display:block
+}
+.Profile .widget-content.individual .profile-textblock {
+ margin: 0;
+ font-size: 14px;
+ padding: 0 30px;
+}
+.Profile .widget-content.individual .profile-img {
+ display:inline;
+ opacity:10;
+ margin:0 6px 3px 0;
+}
+.Profile .widget-content.individual .profile-data {
+ margin: 0;
+}
+.Profile .widget-content.individual .profile-datablock {
+ margin: .5em 0;
+}
+.Profile .widget-content.individual .profile-name-link {
+ background: no-repeat left top;
+ box-sizing: border-box;
+ display: inline-block;
+ max-width: 100%;
+ min-height: 20px;
+ padding-left: 20px;
+}
+.Profile .widget-content.team {
+ padding: 0;
+ border: 1px solid #efefef;
+ border-top: none;
+ border-bottom: none;
+}
+.Profile .widget-content.team li {
+ padding: 5px;
+ margin: 0px 0;
+}
+.Profile .widget-content.team .profile-img {
+ border-radius: 50%;
+ width: 30px;
+ height: auto;
+}

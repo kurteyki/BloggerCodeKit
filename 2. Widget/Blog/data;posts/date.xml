@@ -1,0 +1,6 @@
+<b:if cond='data:this.allBylineItems.timestamp'>
+ <data:post.date/>
+</b:if>
+
+<!-- with format -->
+<b:eval expr='format(data:post.date, "d MMM, YYYY HH:mm aaaa")'/>

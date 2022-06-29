@@ -1,0 +1,5 @@
+<b:if cond='data:post.location'>
+	<b:tag cond='data:post.location.mapsUrl' target="_blank" rel="noopener nofollow" expr:href='data:post.location.mapsUrl' name='a'>
+		<data:post.location.name/>
+	</b:tag>
+</b:if>

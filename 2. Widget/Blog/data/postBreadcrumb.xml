@@ -1,0 +1,31 @@
+<b:include name='postBreadcrumb'/>
+
+<b:includable id='postBreadcrumb'>
+    <ul class='breadcrumb' itemscope='itemscope' itemtype="http://schema.org/BreadcrumbList">
+        <li>
+            <a expr:href='data:blog.homepageUrl'>
+                <span><data:messages.home/></span> 
+            </a>   
+        </li>
+        <b:if cond='data:post.labels'>
+            <b:loop index='no' values='data:post.labels limit 1' var='label'>
+                <li itemprop="itemListElement" itemscope='itemscope' itemtype="http://schema.org/ListItem">        
+                    <a itemprop="item" expr:href='data:label.url'>
+                        <span itemprop="name"><data:label.name/></span>    
+                    </a>
+                    <meta itemprop="position" expr:content="1 + data:no" />
+                </li>
+            </b:loop>
+            <b:else/>
+            <b:if cond='data:view.isPost'>
+                <li itemprop="itemListElement" itemscope='itemscope' itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">Unlabelled</span>    
+                    <meta itemprop="position" content="1" />
+                </li>
+            </b:if>
+        </b:if>
+        <li>
+            <span><data:post.title/></span>    
+        </li>
+    </ul>
+</b:includable>

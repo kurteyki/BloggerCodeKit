@@ -1,0 +1,25 @@
+.breadcrumb {
+   background: #fbfbfb;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding: 15px;
+   border-bottom: 1px solid rgba(0,0,0,0.14);
+   list-style: none; 
+}
+.breadcrumb li {
+   display: inline;
+}
+.breadcrumb li+li:before {
+   padding: 0 3px;
+   color: black;
+   content: "/\00a0";
+}
+.breadcrumb a {
+   color: #000;
+   line-height: normal;
+}
+.breadcrumb li a:hover {
+   color: #01447e;
+   text-decoration: underline;
+}

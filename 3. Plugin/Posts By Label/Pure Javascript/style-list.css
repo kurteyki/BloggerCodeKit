@@ -1,0 +1,49 @@
+<style type="text/css">
+/* ==========================================================================
+POST BY LABEL LIST
+========================================================================== */
+#b-section-postlabellist h3,#b-section-postlabellist h3 {
+ text-transform: uppercase;
+ position: relative;
+ overflow: hidden;
+ font-size: 18px;
+ vertical-align: middle;
+ padding: 0 0 10px 0!important;
+ border-bottom: 1px solid rgba(0,0,0,.1);
+}
+#b-section-postlabellist h3:after,#b-section-postlabellist h3:after{content:'';display:inline-block;position:absolute;height:15px;top:0;margin:9px 0 0 15px;width:100%;background:url(https://4.bp.blogspot.com/-R2WTW6O9E1o/VX7dqIGT1eI/AAAAAAAACc4/pyvQDMMLX3E/s1600/repeat-bg.png)repeat;opacity:.9;}
+ul#postlabellist{margin:0;padding:0;overflow:hidden;text-align: left;}
+ul#postlabellist li{position:relative;list-style:none outside none;padding:5px 0;overflow:hidden;width:100%;}
+ul#postlabellist li img {
+ background-color: #f1f1f1;
+ width: 90px;
+ height: 70px;
+ max-width: 100%;
+}
+
+ul#postlabellist .infopostlabellist {
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 1;
+ -webkit-box-orient: vertical; 
+ overflow: hidden;
+ color: #777;
+}
+ul#postlabellist li .news-text,.overlaytext{text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ul#postlabellist li .news-text {
+ display: none;
+}
+ul#postlabellist li a.postlabellisttitle {
+ font-size: 14px;
+ line-height: normal;
+ overflow: hidden;
+ font-weight: initial;
+ color: #111;
+}
+
+ul#postlabellist li a.postlabellisttitle:hover{color:#999;}
+.postlabellistoverlay{position:relative;max-height:140px;overflow:hidden;float:left;margin-right:10px;}
+.postlabellistoverlay:before{content:'';background-color:rgba(0,0,0,0.4);position:absolute;text-align:center;top:0;left:0;right:0;bottom:0;z-index:2;opacity:0;visibility:hidden;transition:all 0.4s linear;}
+.postlabellistoverlay:after{content:'\f002';font-family:fontawesome;font-size:1.3rem;color:rgba(255,255,255,.8);position:absolute;top:33%;left:42%;text-align:center;z-index:2;opacity:0;visibility:hidden;transition:all 0.20s linear;}
+.postlabellistoverlay:hover:before,.postlabellistoverlay:hover:after{opacity:1;visibility:visible;}
+</style>

@@ -1,0 +1,36 @@
+/* Contact Form */
+.contact-form-name, .contact-form-email, .contact-form-email-message {
+  text-indent: 10px;
+  height: auto;
+  margin: 5px 0;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  color: #777;
+  height: 40px;
+  width: 100%;
+}
+.contact-form-name {
+  width: 60%;
+}
+.contact-form-email {
+  width: 70%;
+}
+.contact-form-email-message {
+  height: 100px;
+}
+.contact-form-button {
+  width: 100px;
+  height: 35px;
+}
+.contact-form-error-message-with-border {
+  color: red;
+}
+.contact-form-error-message-with-border, .contact-form-success-message {
+  text-align: left;
+  display: inline-block;
+}
+@media (max-width:767px) {
+  .contact-form-widget {
+    padding: 10px 15px;
+  }
+}

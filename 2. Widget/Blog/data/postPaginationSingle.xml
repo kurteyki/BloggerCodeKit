@@ -1,0 +1,15 @@
+<b:include cond='data:view.isPost' name='postPaginationSingle'/>
+
+<b:includable id="postPaginationSingle">
+        <b:if cond='data:newerPageUrl'>
+            <a expr:href='data:newerPageUrl'>       
+                <data:messages.newerPosts/>
+            </a>   
+        </b:if>
+
+        <b:if cond='data:olderPageUrl'>
+            <a expr:href='data:olderPageUrl'>       
+                <data:messages.olderPosts/>
+            </a> 
+        </b:if>
+</b:includable>

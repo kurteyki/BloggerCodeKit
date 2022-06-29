@@ -1,0 +1,21 @@
+<b:include cond='data:view.isMultipleItems' name='postPaginationMultiple'/>
+
+<b:includable id="postPaginationMultiple">
+        <b:if cond='data:newerPageUrl'>
+            <a expr:href='data:newerPageUrl'>       
+                <data:messages.newerPosts/>
+            </a>   
+        </b:if>
+
+        <b:if cond='data:view.url == data:blog.homepageUrl AND not data:olderPageUrl'>
+            <a class='home-link' expr:href='data:blog.homepageUrl' expr:title='data:messages.home'>
+                <data:messages.home/>
+            </a>   
+        </b:if>
+
+        <b:if cond='data:olderPageUrl'>
+            <a expr:href='data:olderPageUrl'>       
+                <data:messages.olderPosts/>
+            </a> 
+        </b:if>
+</b:includable>

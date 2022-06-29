@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' 
+	b:templateUrl='TemplateName.xml' 
+	b:templateVersion='1.0' 
+	expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+	<b:comment>Always remove Inject attribute with b:attr</b:comment>
+	<b:attr name='xmlns' value=''/>
+	<b:attr name='xmlns:b' value=''/>
+	<b:attr name='xmlns:expr' value=''/>
+	<b:attr name='xmlns:data' value=''/>	
+	&lt;!--<head>--&gt;&lt;head&gt;
+
+	<b:comment>Browser Data</b:comment>
+	<meta expr:charset="data:blog.encoding"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<b:comment>Favicon</b:comment>
+	<link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
+	<b:if cond='data:widgets'>
+		<b:comment>Browser Mobile Navbar Color</b:comment>
+		<meta expr:content='data:skin.vars.mainColor' name='theme-color'/>
+		<meta expr:content='data:skin.vars.mainColor' name='msapplication-navbutton-color'/>
+	</b:if>
+
+	<b:comment>SEO Title</b:comment>
+	<b:if cond='data:view.isHomepage'>
+		<b:comment>Homepage</b:comment>
+		<title><data:blog.title.escaped/></title>
+		<b:elseif cond='data:view.isSingleItem'/>
+		<b:comment>Post / Pages</b:comment>
+		<title><data:blog.pageName.escaped/></title>			
+		<b:elseif cond='data:view.isSearch'/>
+		<b:if cond='data:view.search.query'>
+			<b:comment>Search Query</b:comment>
+			<title><data:blog.pageName.escaped/></title>
+			<b:elseif cond='data:view.search.label'/>
+			<b:comment>Search Label</b:comment>
+			<title><data:blog.pageName.escaped/></title>
+			<b:else/>
+			<b:comment>Search Index</b:comment>
+			<title><data:blog.title.escaped/></title>
+		</b:if>
+		<b:elseif cond='data:view.isArchive'/>
+		<b:comment>Archive</b:comment>
+		<title><data:blog.pageName.escaped/></title>
+		<b:elseif cond='data:view.isError'/>
+		<b:comment>404</b:comment>
+		<title> 404 | Page Not Found </title> 
+	</b:if>
+
+	<b:comment>SEO Description</b:comment>
+	<b:if cond='data:blog.metaDescription'>
+		<meta expr:content='data:blog.metaDescription' name='description'/>
+	</b:if>
+
+	<b:comment>Canonical URL</b:comment>
+	<link expr:href='data:blog.url.canonical' rel='canonical'/>
+
+	<b:comment>Block SE Robots on Page [Search Query / Label, Archive]</b:comment>
+	<b:if cond='data:view.isSearch OR data:view.isArchive'>
+		<meta content='noindex,nofollow' name='robots'/>
+	</b:if>		
+
+	<b:comment>Blog Feeds</b:comment>
+	<data:blog.feedLinks/>
+
+	<b:comment>Meta OpenGraph</b:comment>
+	<b:include name='openGraphMetaData'/>
+
+	<b:comment>Blog restricted Age</b:comment>
+	<b:if cond='data:blog.adultContent'>
+		<meta content='adult' name='rating'/>
+	</b:if>
+
+	<b:comment>CSS External</b:comment>
+	<b:include name='cssx'/>
+
+	<b:if cond='data:view.isLayoutMode'>
+		<b:skin><![CDATA[ 
+			/*
+			<Group description="Main">
+				<Variable name="mainColor" description="MainColor" type="color" default="#FFFFFF" hideEditor="false"  value="#FFFFFF"/>
+			</Group>
+			*/
+			]]>
+		</b:skin>
+		<b:template-skin>
+			<![CDATA[body#layout{
+			body#layout {min-width:768px;padding:100px 20px 0 !important;}
+			body#layout .hidden, body#layout .invisible {display: inherit;}
+			body#layout::before {
+			content: "TemplateName";
+			position: absolute;
+			top: 20px;
+			right: 27px;
+			padding: 14px 22px;
+			font-family: monospace;
+			font-size: 18px;
+			color: #3f51b5;
+			background: #c8e7ff;
+			border-radius: 2px 4px;
+			border: 1px solid #3f51b5;
+			}
+			]]>
+		</b:template-skin>
+	</b:if>
+
+	<b:comment>CSS Internal</b:comment>
+	<style type="text/css">
+	</style>
+
+	<b:comment>Define Default Code Here</b:comment>
+	<b:defaultmarkups>
+		<b:defaultmarkup type='Common'>
+			<b:includable id='cssx'>
+				<b:comment>insert css external here</b:comment>
+			</b:includable>
+			<b:includable id='jsx'>
+				<b:comment>insert js external here</b:comment>				
+			</b:includable>						
+		</b:defaultmarkup>			
+	</b:defaultmarkups>	
+
+	<b:comment>Google Analytics</b:comment>
+	<b:include data='blog' name='google-analytics'/>	
+
+	&lt;!--</head>--&gt;&lt;/head&gt;
+	<body>
+
+		<b:section name='Main' showaddelement='true' id='main'></b:section>
+
+		<b:comment>JS External</b:comment>
+		<b:include name='jsx'/>
+
+		<b:comment>JS Internal</b:comment>
+		<script>
+			//<![CDATA[     
+			//]]>			
+		</script>		
+
+	&lt;!--</body>--&gt;&lt;/body&gt; <!-- // break
+-->	
+</html>

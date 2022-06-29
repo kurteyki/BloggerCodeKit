@@ -1,0 +1,19 @@
+.TextList li {
+ float: left;
+ width: 40%;
+}
+.TextList li:nth-child(2n) {
+ float: right;
+}
+.TextList li {
+ position: relative;
+ padding: 5px 0 5px 20px;
+}
+.TextList li:before {
+ position: absolute;
+ top: 0;
+ left: 0;
+ font-family: fontawesome;
+ content:'\f1db';
+ padding: 7px 0;
+}

@@ -1,0 +1,15 @@
+<b:include name='classBody'/>
+
+<b:includable id='classBody'>
+    <b:class cond='data:view.isHomepage' expr:name='data:tagclass + "-view-home"' />
+    <b:class cond='data:view.isPost' expr:name='data:tagclass + "-view-item"' />
+    <b:class cond='data:view.isPage' expr:name='data:tagclass + "-view-static"' />
+    <b:class cond='data:view.search.label' expr:name='data:tagclass + "-view-search-label"' />
+    <b:class cond='data:view.search.query' expr:name='data:tagclass + "-view-search-query"' />
+    <b:class cond='data:view.search and !data:view.search.label and !data:view.search.query' expr:name='data:tagclass + "-view-search-default"'/>
+    <b:class cond='data:view.isArchive' expr:name='data:tagclass + "-view-archive"' />
+    <b:class cond='data:view.isError' expr:name='data:tagclass + "-view-error"' />
+    <b:class cond='data:view.isPreview' expr:name='data:tagclass + "-view-preview"' />
+    <meta itemprop="accessibilityControl" content="fullKeyboardControl"/>
+    <meta itemprop="accessibilityControl" content="fullMouseControl"/>
+</b:includable>

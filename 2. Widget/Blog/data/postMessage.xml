@@ -1,0 +1,31 @@
+<b:include name='postMessage'/>
+
+<b:includable id="postMessage">
+	<b:if cond='data:view.isHomepage and data:posts.empty'>					
+		<data:messages.theresNothingHere/>
+	</b:if>
+	<b:if cond='data:view.search.label'>
+		<b:if cond='data:posts.size gte 1'>							
+			<data:view.search.resultsMessageHtml/>
+			<b:else/>							
+			<data:view.search.resultsMessageHtml/> : <data:messages.noResultsFound/>
+		</b:if>
+	</b:if>
+	<b:if cond='data:view.search.query'>
+		<b:if cond='data:posts.size gte 1'>							
+			<data:view.search.resultsMessageHtml/>
+			<b:else/>							
+			<data:view.search.resultsMessageHtml/> : <data:messages.noResultsFound/>
+		</b:if>
+	</b:if>
+	<b:if cond='data:view.isArchive'>
+		<b:if cond='data:posts.size gte 1'>							
+			<data:view.archive.rangeMessage/>
+			<b:else/>							
+			<data:view.archive.rangeMessage/> : <data:messages.noResultsFound/>
+		</b:if>
+	</b:if>
+	<b:if cond='data:view.isError'>					
+		<data:navMessage/>
+	</b:if>
+</b:includable>

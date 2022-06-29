@@ -1,0 +1,34 @@
+<b:widget id='Header1' locked='true' title='Header' type='Header' version='2' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='displayUrl'/>
+		<b:widget-setting name='displayHeight'>0</b:widget-setting>
+		<b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+		<b:widget-setting name='useImage'>false</b:widget-setting>
+		<b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+		<b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+		<b:widget-setting name='displayWidth'>0</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main' var='this'>
+		<b:if cond='data:image'>
+			<a expr:href='data:blog.homepageUrl'>
+				<img expr:alt='data:title' expr:src='data:image'/> 
+				<b:class cond='data:imagePlacement == "BEHIND"' name='logo-only'/>
+				<b:class cond='data:imagePlacement == "REPLACE"' name='logo-text'/>
+				<b:class cond='data:imagePlacement == "BEFORE_DESCRIPTION"' name='logo-need-text'/>
+				<b:if cond='data:imagePlacement == "BEFORE_DESCRIPTION"'>
+					<data:title/>
+				</b:if>
+			</a>   
+			<b:else/>
+			<b:tag cond="data:view.isMultipleItems" name='h1'>
+				<b:tag cond="not data:view.isHomepage" expr:href="data:blog.homepageUrl" name='a'>
+					<data:title/>
+				</b:tag>
+			</b:tag>
+		</b:if>
+	</b:includable>
+	<b:includable id='behindImageStyle'/>
+	<b:includable id='description'/>
+	<b:includable id='image'/>
+	<b:includable id='title'/>
+</b:widget>

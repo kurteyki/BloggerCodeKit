@@ -1,0 +1,27 @@
+<b:widget id='PageList1' locked='false' title='PageList' type='PageList' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='pageListJson'><![CDATA[{
+			"link0": {
+			"href": "http://youreca.blogspot.com/",
+			"position": 0,
+			"title": "Home"
+			}
+			}]]>
+		</b:widget-setting>
+		<b:widget-setting name='homeTitle'>Home</b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>
+		<b:loop values='data:links' var='link'>
+			<span>
+				<b:class cond='data:overflow' name='overflowable-item'/>
+				<b:class cond='data:link.isCurrentPage' name='selected'/>
+				<a expr:href='data:link.href'><data:link.title/></a>
+			</span>
+		</b:loop>
+	</b:includable>
+	<b:includable id='content'/>
+	<b:includable id='overflowButton'/>
+	<b:includable id='overflowablePageList'/>
+	<b:includable id='pageLink'/>
+	<b:includable id='pageList'/>
+</b:widget>

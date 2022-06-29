@@ -1,0 +1,14 @@
+<b:widget id='BlogSearch1' locked='false' title='BlogSearch' type='BlogSearch' visible='true'>
+	<b:includable id='main'>
+		<form expr:action='data:blog.searchUrl'>
+			<b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+
+			<input autocomplete='off' expr:aria-label='data:messages.searchThisBlog' expr:placeholder='data:messages.searchThisBlog' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q'/>
+			
+			<input expr:value='data:messages.search.escaped' type='submit'/>
+		</form>
+	</b:includable>
+	<b:includable id='content'/>
+	<b:includable id='searchForm'/>
+	<b:includable id='searchSubmit'/>
+</b:widget>

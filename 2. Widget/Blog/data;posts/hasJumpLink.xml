@@ -1,0 +1,8 @@
+<b:if cond='data:post.hasJumpLink'>
+   <data:post.body/>
+   <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
+      <b:eval expr='data:blog.jumpLinkMessage'/>
+  </a>
+  <b:else/>
+  <data:post.body/>
+</b:if>

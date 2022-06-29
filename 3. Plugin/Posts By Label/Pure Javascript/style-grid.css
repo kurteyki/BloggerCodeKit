@@ -1,0 +1,21 @@
+/* ==========================================================================
+POST LABEL GRID
+========================================================================== */
+#b-section-postlabelgrid{border-top:1px solid #ddd}
+#b-section-postlabelgrid h3,#b-section-postlabelgrid h3{text-transform:uppercase;position:relative;overflow:hidden;margin:15px 20px 0 20px;font-size:18px;vertical-align:middle;padding:0 0 10px 0!important;border-bottom:1px solid rgba(0,0,0,.1)}
+#b-section-postlabelgrid h3:after,#b-section-postlabelgrid h3:after{content:'';display:inline-block;position:absolute;height:15px;top:0;margin:9px 0 0 15px;width:100%;background:url(https://4.bp.blogspot.com/-R2WTW6O9E1o/VX7dqIGT1eI/AAAAAAAACc4/pyvQDMMLX3E/s1600/repeat-bg.png)repeat;opacity:.9}
+#b-section-postlabelgrid .widget-content,#b-section-postlabelgrid .widget-content{padding:10px}
+/* Primary */
+ul#postlabelgrid{margin:0;padding:0;overflow:hidden;text-align:left}
+ul#postlabelgrid li{position:relative;list-style:none outside none;padding:5px 10px;overflow:hidden;width:100%;border-bottom: 1px solid #eeeeee;}
+ul#postlabelgrid li img{background-color:#f1f1f1;width:120px;height:100px;max-width:100%}
+ul#postlabelgrid li .news-text,.overlaytext{text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ul#postlabelgrid li a.postlabelgridtitle{font-size:15px;line-height:normal;overflow:hidden;font-weight:bold;color:#111}
+ul#postlabelgrid li a.postlabelgridtitle:hover{color:#999}
+.postlabelgridoverlay{position:relative;max-height:140px;overflow:hidden;float:left;margin-right:10px}
+.postlabelgridoverlay:before{content:'';background-color:rgba(0,0,0,0.4);position:absolute;text-align:center;top:0;left:0;right:0;bottom:0;z-index:2;opacity:0;visibility:hidden;transition:all 0.4s linear}
+.postlabelgridoverlay:after{content:'\f002';font-family:fontawesome;font-size:1.3rem;color:rgba(255,255,255,.8);position:absolute;top:33%;left:42%;text-align:center;z-index:2;opacity:0;visibility:hidden;transition:all 0.20s linear}
+.postlabelgridoverlay:hover:before,.postlabelgridoverlay:hover:after{opacity:1;visibility:visible}
+@media (min-width:576px){ul#postlabelgrid li{width:100%}}
+@media (min-width:768px){ul#postlabelgrid li{width:50%;height:auto;float:left;border-bottom: none}}
+@media (min-width:992px){ul#postlabelgrid li{width:33%}}

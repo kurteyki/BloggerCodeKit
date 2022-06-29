@@ -1,0 +1,37 @@
+<script type='application/ld+json'>
+{
+	"@context": "http://schema.org",
+	"@type": "BlogPosting",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "<data:post.url.canonical/>"
+	},
+	"headline": "<data:post.title/>",
+	"description": "<b:eval expr='data:post.snippets.long snippet { length: 150, links: false, linebreaks: false, ellipsis: true }'/>",
+	<b:if cond='data:view.isSingleItem'>
+	"articleBody": "<b:eval expr='data:post.body snippet { links: false, linebreaks: false, ellipsis: false }'/>",
+	</b:if>
+	"datePublished": "<data:post.date.iso8601/>",
+	"dateModified": "<data:post.lastUpdated.iso8601/>",
+	"image": {
+		"@type": "ImageObject",
+		"url": "<b:eval expr='data:post.featuredImage ? resizeImage(data:post.featuredImage, 1200, "1200: 630") : "xxxxxxxxxxxx_logo_xxxxxxxxxxxxx"'/>",
+		"height": 630,
+		"width": 1200
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "<data:blog.title/>",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "xxxxxxxxxxxx_logo_xxxxxxxxxxxxx",
+			"width": 206,
+			"height": 60
+		}
+	},
+	"author": {
+		"@type": "Person",
+		"name": "<data:post.author.name/>"
+	}
+}
+</script>

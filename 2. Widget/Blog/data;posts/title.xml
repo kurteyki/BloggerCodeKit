@@ -1,0 +1,3 @@
+<a expr:href='data:post.url'>
+   <b:eval expr='data:post.title ? data:post.title : data:messages.noTitle' />
+</a>

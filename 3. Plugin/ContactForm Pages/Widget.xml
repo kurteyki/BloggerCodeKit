@@ -1,0 +1,4 @@
+<b:widget id='ContactForm1' locked='true' title='Contact Static Page' type='ContactForm' version='2' visible='true'>
+   <b:includable id='main'/>
+   <b:includable id='content'/>
+</b:widget>

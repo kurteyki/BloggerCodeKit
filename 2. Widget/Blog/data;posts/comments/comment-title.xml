@@ -1,0 +1,7 @@
+<b:if cond='data:post.numberOfComments &gt; 0'>
+    <b:message name='messages.numberOfComments'>
+        <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+    </b:message>
+    <b:else/>
+    <data:this.allBylineItems.comments.label/>
+</b:if>

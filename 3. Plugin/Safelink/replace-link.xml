@@ -1,0 +1,11 @@
+<script type="text/javascript">
+var setting = {
+ pengecualianstatus : true,
+ pengecualian : "google.com,twitter.com,javascript:;,mailto:",
+ hanyauntukstatus : false,
+ hanyauntuk : "githubusercontent.com",
+ path : "#kurteyki?decode="
+}; 
+</script>
+<script type="text/javascript" src='script.js'></script>
+<script src="https://www.blogger.com/feeds/xxxxxxxxxxxxx___blogid___xxxxxxxxxxxxx/posts/default?alt=json-in-script&amp;max-results=15&amp;callback=showurl"></script>

@@ -1,0 +1,3 @@
+function kodein_checkelement(e){return document.getElementById(e)?1:0}function kodein_insertelement(e,n,t){var r=n.parentNode;"after"==t&&r.insertBefore(e,n.nextSibling),"before"==t&&r.insertBefore(e,n)}function kodein_moveElement(e,n,t,r,i,o){if(!kodein_checkelement(r))return!1;var m=document.getElementById(i),d=m.getElementsByTagName(n),l=document.getElementById(r);if(0==t||d.length<0||d.length<t)return m.insertAdjacentElement(o,l),!1;kodein_insertelement(l,d[t-=1],e)}
+
+function kodein_MoveByID(e,n){var t=document.createDocumentFragment();t.appendChild(document.getElementById(e)),document.getElementById(n).appendChild(t)}

@@ -1,0 +1,17 @@
+.linkloadmore {
+    display:block;
+    text-align: center;
+}
+#linkloadmore {
+    display: inline-block;
+} 
+#linkloadmore a{
+    padding: 10px;
+    background: <data:skin.vars.pagenav_background/>;
+    color:<data:skin.vars.pagenav_color/>;
+    border-radius: 5px;
+}
+#linkloadmore a:hover {
+   color: <data:skin.vars.pagenav_color/>;
+   background:<data:skin.vars.pagenav_background_hover/>;
+}

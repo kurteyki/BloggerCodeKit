@@ -1,0 +1,11 @@
+<b:if cond='data:this.allBylineItems.comments AND data:post.allowComments'>
+    <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+        <b:if cond='data:post.numberOfComments &gt; 0'>
+            <b:message name='messages.numberOfComments'>
+                <b:param expr:value='data:post.numberOfComments' name='numComments'/>
+            </b:message>
+            <b:else/>
+            <data:this.allBylineItems.comments.label/>
+        </b:if>
+    </a>    
+</b:if> 

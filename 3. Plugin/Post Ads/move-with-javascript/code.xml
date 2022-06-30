@@ -1,0 +1,132 @@
+<noscript>
+ <style type='text/css'>
+  #HTML111,#HTML222,#HTML333,#HTML555 {
+  display:none;
+  }
+</style>
+</noscript>
+
+<b:comment>post feed tambahkan index dan kodenya</b:comment>
+<b:loop values='data:posts' var='post' index='x'>  
+    <b:if cond='data:x==1'>
+        <div id='ads-feed-target'/>  
+    </b:if>
+</b:loop>
+
+<b:comment>sisipkan dibagian data:post.body</b:comment>
+<div id='ads-top-target'/> 
+<div id='ads-bottom-target'/>
+
+<!-- widget -->
+<b:widget cond='!data:view.isPreview and !data:view.search.query and data:view.isMultipleItems' id='HTML555' locked='true' title='Iklan dibagian Artikel Index 1' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://placehold.it/480x120/03a9f4/fff?text=480x120" />]]>
+    </b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>  
+
+    <div id='ads-feed-post-source'>                
+        <div class='adspost feed grid-index-inner'>
+            <data:content/>
+            <div class='clear'/>
+        </div>
+    </div>        
+    <script type='text/javascript'>
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        kodein_MoveByID(&#39;ads-feed-post-source&#39;,&#39;ads-feed-target&#39;);
+        }); 
+    </script>   
+</b:includable>
+</b:widget>
+<b:widget cond='!data:view.isPreview and  !data:view.search.query and data:view.isMultipleItems' id='HTML551' locked='true' title='Iklan dibagian Artikel Index 2' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://placehold.it/480x120/03a9f4/fff?text=480x120" />]]>
+    </b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>   
+
+    <div id='ads-feed-post-source2'>                
+        <div class='adspost feed grid-index-inner'>
+            <data:content/>
+        </div>
+    </div>        
+    <script type='text/javascript'>
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        kodein_MoveByID(&#39;ads-feed-post-source2&#39;,&#39;ads-feed-target2&#39;);
+        }); 
+    </script>  
+
+</b:includable>
+</b:widget>
+<b:widget cond='!data:view.isPreview and !data:view.isPreview and data:view.isPost' id='HTML111' locked='true' title='Iklan dibagian atas Artikel' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://placehold.it/480x120/03a9f4/fff?text=480x120" />]]>
+    </b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>  
+
+    <div id='ads-top-post-source'>                
+        <div class='adspost'>
+            <data:content/>
+        </div>
+    </div>        
+    <script type='text/javascript'>
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        kodein_MoveByID(&#39;ads-top-post-source&#39;,&#39;ads-top-target&#39;);
+        }); 
+    </script>   
+
+</b:includable>
+</b:widget>
+<b:widget cond='!data:view.isPreview and data:view.isPost' id='HTML333' locked='true' title='Iklan Ditengah Artikel' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://placehold.it/480x120/03a9f4/fff?text=480x120" />]]>
+    </b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>
+
+    <div class='adspost center' id='content-ads'>
+        <data:content/>
+    </div>
+
+</b:includable>
+</b:widget>
+<b:widget cond='!data:view.isPreview and data:view.isPost' id='HTML444' locked='true' title='Pengaturan Iklan Tengah' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'>var setting = {
+            taghtml: &quot;br&quot;, 
+            index: &quot;1&quot;
+            };
+        </b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>    
+
+        <script type='text/javascript'>
+            document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+            <data:content/> 
+            kodein_moveElement(&#39;after&#39;,setting.taghtml,setting.index,&#39;content-ads&#39;,&#39;content-body&#39;,&#39;beforeend&#39;);
+            }); 
+        </script>     
+
+    </b:includable>
+</b:widget>
+<b:widget cond='!data:view.isPreview and data:view.isPost' id='HTML222' locked='true' title='Iklan Dibawah Artikel' type='HTML' version='2' visible='true'>
+    <b:widget-settings>
+        <b:widget-setting name='content'><![CDATA[<img src="https://placehold.it/480x120/03a9f4/fff?text=480x120" />]]>
+    </b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>      
+
+    <div id='ads-bottom-post-source'>               
+        <div class='adspost bottom'>
+            <data:content/>
+        </div>
+    </div>        
+    <script type='text/javascript'>
+        document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
+        kodein_MoveByID(&#39;ads-bottom-post-source&#39;,&#39;ads-bottom-target&#39;);
+        }); 
+    </script> 
+
+</b:includable>
+</b:widget>

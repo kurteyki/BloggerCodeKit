@@ -1,0 +1,11 @@
+<b:include cond='data:view.isMultipleItems' name="postPaginationMultiple"/>
+
+<b:includable id="postPaginationMultiple">
+	<b:if cond='data:olderPageUrl'>
+		<div class='text-center py-3' id='postIndexPagination'>
+			<a class="btn btn-primary btn-sm pagination-link" data-turbo="false" expr:data-loading='data:messages.loading' expr:href='data:olderPageUrl'>
+				<data:messages.loadMorePosts/>
+			</a>
+		</div>
+	</b:if> 	
+</b:includable>

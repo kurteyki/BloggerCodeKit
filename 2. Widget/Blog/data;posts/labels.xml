@@ -2,7 +2,7 @@
     <b:if cond='data:post.labels'>
         <data:this.allBylineItems.labels.label/>
         <b:loop values='data:post.labels limit 10' var='label'>
-            <a expr:href='data:label.url' expr:title='data:label.name' rel='category tag'>
+            <a expr:href='data:label.url'>
                 <b:class expr='data:label.name' expr:name='data:label.name'/>
                 <data:label.name/>
             </a>

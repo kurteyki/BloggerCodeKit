@@ -1,0 +1,7 @@
+#blog-pager{clear:both;margin:30px auto;text-align:center; padding: 7px;}
+.blog-pager {background: none;}
+.displaypageNum a,.showpage a,.pagecurrent{font-size: 14px;padding: 5px 12px;margin-right:5px; color: #666; background-color:#eee;}
+.displaypageNum a:hover,.showpage a:hover, .pagecurrent{background:#359BED;text-decoration:none;color: #fff;}
+#blog-pager .pagecurrent{font-weight:bold;color: #fff;background:#359BED;}
+.showpageOf{display:none!important}
+#blog-pager .pages{border:none;}

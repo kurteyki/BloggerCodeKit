@@ -12,7 +12,7 @@
 		<b:loop values='data:posts filter (post => post.id != data:view.postId)' var='post'>
 
 			<b:if cond='data:postDisplay.showFeaturedImage'>
-				<img class="xxx" loading="lazy" expr:src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPXk2ZddRceCKCDDinODgLudn_NBeYZhp9vcTtROpXBEowyFguULTh__DLiheEmtdKg_vn80qRHIPUTCyyUAZHaXBGzWedomeMJViKX05NIdRKu0o6eF_xeHN--ub4n5mh8r-PAiHnTeDWYwA8pHQc-e4U6H6NZqbp5HLerels-9IiDIoJMr4PQJC1-Q/w300/noimage-blogger.jpg"' expr:alt="data:post.title"/>
+				<img class="xxx" loading="lazy" expr:src='data:post.featuredImage ? resizeImage(data:post.featuredImage, 300) : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3Ia32aeortEtnG6libJiXjj6It8o5ikSjQEaPSvLK09ORfnWovo0FQX25VeAB-cSySlozaol3LZ-9C7BVpfeMMcxtEE7SxW-BCLVX4wwywof7kiBCp8nsHbre7ScleqehuZzY0G17M1mBV1H-KzYd1QW098SZzEAHE0GecLG5u2ULhnEYtKTsWUMp/w300/no-image.jpg"' expr:alt="data:post.title"/>
 			</b:if>
 
 			<b:if cond='data:postDisplay.showTitle'>

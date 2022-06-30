@@ -12,10 +12,10 @@
 <b:include cond='data:post.author.aboutMe' name='authorPost'/>
 
 <b:includable id="authorPost">
-    <img expr:src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 60) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt='data:post.author.name'/>    
-    <a target="_blank" rel="noopener nofollow" expr:href='data:post.author.profileUrl'>
+    <img expr:src='data:post.author.authorPhoto.image ? resizeImage(data:post.author.authorPhoto.image, 60) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt='data:post.author.name'/>  
+    <b:tag cond="data:post.author.profileUrl" expr:href="data:post.author.profileUrl" target="_blank" rel="noopener nofollow" name='a'>
         <data:post.author.name/>
-    </a>
+    </b:tag>      
     <b:if cond='data:post.author.aboutMe'>
         <data:post.author.aboutMe/>
     </b:if>

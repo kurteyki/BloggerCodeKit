@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:js='true' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='custom.xml' b:templateVersion='1.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+<head>
+<b:skin><![CDATA[
+]]>
+</b:skin>
+</head>
+<body>
+
+<b:section showaddelement='true' id="BlogWidget">
+<b:widget id='Blog1' locked='true' title='Blog Widget' type='Blog' version='2' visible='true'>
+<b:widget-settings>
+<b:widget-setting name='showDateHeader'>false</b:widget-setting>
+<b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+<b:widget-setting name='showShareButtons'>true</b:widget-setting>
+<b:widget-setting name='showCommentLink'>true</b:widget-setting>
+<b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+<b:widget-setting name='showAuthor'>true</b:widget-setting>
+<b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+<b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+<b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+<b:widget-setting name='timestampLabel'>Post On :</b:widget-setting>
+<b:widget-setting name='reactionsLabel'/>
+<b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+<b:widget-setting name='style.layout'>1x1</b:widget-setting>
+<b:widget-setting name='showLabels'>true</b:widget-setting>
+<b:widget-setting name='showLocation'>false</b:widget-setting>
+<b:widget-setting name='postLabelsLabel'>Labels :</b:widget-setting>
+<b:widget-setting name='showTimestamp'>true</b:widget-setting>
+<b:widget-setting name='postsPerAd'>1</b:widget-setting>
+<b:widget-setting name='showBacklinks'>false</b:widget-setting>
+<b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+<b:widget-setting name='showInlineAds'>true</b:widget-setting>
+<b:widget-setting name='showReactions'>false</b:widget-setting>
+</b:widget-settings>	
+</b:widget>
+</b:section>
+
+<script>
+//<![CDATA[
+	//]]>	
+	</script>
+
+	</body>	
+	</html>

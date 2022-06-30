@@ -1,0 +1,5 @@
+<b:include cond='data:this.allBylineItems.labels.label AND data:post.labels' name='postRelated'/>
+
+<b:includable id="postRelated">
+	&lt;div id=&#039;postRelated&#039; data-limit=&#039;5&#039; data-id=&#039;<data:post.id/>&#039; data-title=&#039;<data:this.allBylineItems.labels.label/>&#039; data-labels=&#039;<b:loop index='i' values='data:post.labels limit 5' var='label'><data:label.name/><b:if cond='data:post.labels.size != data:i + 1'>,</b:if></b:loop>&#039;&gt;&lt;/div&gt;
+</b:includable>

@@ -2,19 +2,19 @@
 Next & Prev
 ========================================================================== */
 #post_pagination_post {
-display: block;
-padding: 20px 15px;
-overflow: hidden;
-clear: both;
+	display: block;
+	padding: 20px 15px;
+	overflow: hidden;
+	clear: both;
 }
 .post_pagination_post_new{
-float:left;
-width:50%;
-text-align:left
+	float:left;
+	width:50%;
+	text-align:left
 }
 .post_pagination_post_old{
-float:right;
-width:50%;
-display:block;
-text-align:right
+	float:right;
+	width:50%;
+	display:block;
+	text-align:right
 }

@@ -1,0 +1,33 @@
+<b:include cond='data:this.allBylineItems.share' name='sharePost'/>
+
+<b:includable id="sharePost">
+	<div id="sharePost" class="dropdown">
+		<button class="btn border-0 p-0 text-secondary" type="button" id="dropdown-share" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="bi bi-share"></i>
+			<data:messages.share/>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdown-share">
+			<li><a target="_blank" rel="noopener" class="dropdown-item" expr:href='"https://www.facebook.com/sharer/sharer.php?u=" + data:post.url' title="Share to Facebook">
+				<i class="bi bi-facebook text-primary"></i>
+				Facebook
+			</a></li>
+			<li><a target="_blank" rel="noopener" class="dropdown-item" expr:href='"https://twitter.com/intent/tweet?url=" + data:post.url'  title="Share to Twitter">
+				<i class="bi bi-twitter text-primary"></i>
+				Twitter
+			</a></li>
+			<li><a target="_blank" rel="noopener" class="dropdown-item" expr:href='"https://api.whatsapp.com/send?text=" + data:post.url'  title="Share to WhatsApp">
+				<i class="bi bi-whatsapp text-success"></i>
+				WhatsApp
+			</a></li>
+			<li><a target="_blank" rel="noopener" class="dropdown-item" expr:href='"https://www.linkedin.com/sharing/share-offsite/?url=" + data:post.url'  title="Share to Linkedin">
+				<i class="bi bi-linkedin text-primary"></i>
+				Linkedin
+			</a></li>
+			<li><hr class="dropdown-divider"/></li>
+			<li><span role="button" expr:onclick='"copyThis(&#039;" + data:post.url + "&#039;)"' class="dropdown-item">
+				<i class="bi bi-link text-info"></i>
+				Copy Link
+			</span></li>
+		</ul>
+	</div>
+</b:includable>

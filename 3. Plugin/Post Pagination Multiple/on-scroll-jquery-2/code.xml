@@ -1,0 +1,13 @@
+<div class="blog-posts">
+<!-- disini adalah looping artikelnya -->
+</div>
+
+<b:if cond='not data:view.isSingleItem'>
+ <b:if cond='data:olderPageUrl'>
+  <div  id='linkloadmore'>
+   <a expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_pagination-old&quot;' expr:title='data:messages.olderPosts' itemprop='url'>
+    <span itemprop='name'>Load More</span>
+   </a>
+  </div>
+ </b:if> 
+</b:if>

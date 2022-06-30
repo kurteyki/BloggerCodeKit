@@ -1,0 +1,119 @@
+#comments .widget-heading {
+margin-bottom: 30px;
+}
+#comments .avatar-image-container {
+float: left;
+border-radius: 100px;
+overflow: hidden;
+width: 40px;
+height: 40px;
+margin: 0 20px 0 0;
+}
+.rtl #comments .avatar-image-container {
+float: right;
+margin: 0 0 0 20px;
+}
+#comments .avatar-image-container img {
+width: 100%;
+height: 100%;
+background-color: var(--widget-bg);
+background-size: 100%;
+background-position: center;
+background-repeat: no-repeat;
+}
+#comments .comments-content ol > li.comment > .comment-block {
+position: relative;
+padding-bottom: 20px;
+}
+#comments .comment-block .comment-header {
+display: flex;
+align-items: center;
+}
+#comments .comments-content .user a {
+font-style: normal;
+font-weight: 600;
+text-transform: uppercase;
+margin-right: 15px;
+display: block;
+font-size: 13px;
+}
+#comments .datetime a {
+color: #999;
+font-size: 11px;
+display: block;
+}
+#comments .comments-content ol > li.comment {
+margin-bottom: 20px;
+overflow: hidden;
+border-bottom: 1px solid #efefef;
+border-radius: 1px;
+}
+#comments .comment-block .comment-content {
+margin: 10px 0 10px 60px;
+font-size: 13px;
+font-weight: 400;
+color: #676767;
+}
+.rtl #comments .comment-block .comment-content {
+margin: 10px 60px 10px 0;
+}
+#comments .comment-actions a {
+font-size: 10px;
+margin: 0 0 0 60px;
+font-weight: 500;
+background-color: var(--mega-bg);
+padding: 2px 7px;
+float: right;
+}
+.rtl #comments .comment-actions a {
+margin: 0 60px 0 0;
+float: left;
+}
+#comments .comment-reply {
+font-size: 12px;
+font-weight: 500;
+}
+#comments .comment-replies .comment {
+padding: 20px 20px;
+position: relative;
+}
+#comments .comment-replies .comment:before {
+content: '';
+width: 20px;
+height: 10px;
+position: absolute;
+border-bottom: 1px solid var(--border-c);
+left: 0;
+top: 30px;
+}
+#comments .comment-replies .comment:not(:last-child) {
+padding-bottom: 20px;
+}
+#emo-box, #hide-emo,
+.comment-form p,
+.comment_author_flag,
+.continue,
+.loadmore,
+span.thread-toggle {
+display: none;
+}
+#top-continue {
+display: block;
+}
+.noAvatar {
+width: 100%;
+display: flex;
+text-transform: uppercase;
+font-size: 14px;
+justify-content: center;
+color: #00000054;
+font-weight: 700;
+align-items: center;
+height: 100%;
+background-color: var(--mega-bg);
+border: 2px solid var(--border-c);
+border-radius: 100px;
+}
+#comments .comment-actions .item-control {
+display: none;
+}

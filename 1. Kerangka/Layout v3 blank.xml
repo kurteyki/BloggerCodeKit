@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='custom.xml' b:templateVersion='1.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+<html b:css='false' b:js='true' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='custom.xml' b:templateVersion='1.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
 	<head>
 		<b:skin/>
 	</head>

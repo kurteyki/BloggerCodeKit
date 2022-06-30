@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='custom.xml' b:templateVersion='1.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+	<head>
+		<b:skin/>
+	</head>
+	<body>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.min.js" integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<b:section showaddelement='true' id="BlogWidget">
+			<b:widget id='Blog1' locked='true' title='Blog Widget' type='Blog' version='2' visible='true'>
+				<b:widget-settings>
+					<b:widget-setting name='showDateHeader'>false</b:widget-setting>
+					<b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+					<b:widget-setting name='showShareButtons'>true</b:widget-setting>
+					<b:widget-setting name='showCommentLink'>true</b:widget-setting>
+					<b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+					<b:widget-setting name='showAuthor'>true</b:widget-setting>
+					<b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+					<b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+					<b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+					<b:widget-setting name='timestampLabel'>Post On :</b:widget-setting>
+					<b:widget-setting name='reactionsLabel'/>
+					<b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+					<b:widget-setting name='style.layout'>1x1</b:widget-setting>
+					<b:widget-setting name='showLabels'>true</b:widget-setting>
+					<b:widget-setting name='showLocation'>false</b:widget-setting>
+					<b:widget-setting name='postLabelsLabel'>Labels :</b:widget-setting>
+					<b:widget-setting name='showTimestamp'>true</b:widget-setting>
+					<b:widget-setting name='postsPerAd'>1</b:widget-setting>
+					<b:widget-setting name='showBacklinks'>false</b:widget-setting>
+					<b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+					<b:widget-setting name='showInlineAds'>true</b:widget-setting>
+					<b:widget-setting name='showReactions'>false</b:widget-setting>
+				</b:widget-settings>	
+				<b:includable id='main' var="this">
+
+					<b:loop index='x' values="data:posts" var="post">
+						
+						<b:if cond='data:view.isMultipleItems'>
+							<a expr:href='data:post.url'>
+								<b:eval expr='data:post.title ? data:post.title : data:messages.noTitle' />
+							</a>
+						</b:if>
+						<b:if cond='data:view.isSingleItem'>	
+							<b:include cond='data:this.allBylineItems.comments AND data:post.allowComments' name='postComment'/>
+						</b:if>
+					</b:loop>
+
+				</b:includable>	
+				<b:includable id="postComment">
+
+					<div id="postComment" class="px-3 px-md-4 py-2 border-top">
+
+						<div class="d-flex justify-content-between mb-3">
+							<strong class="fs-4">
+								<b:if cond='data:post.numberOfComments &gt; 0'>
+									<b:message name='messages.numberOfComments'>
+										<b:param expr:value='data:post.numberOfComments' name='numComments'/>
+									</b:message>
+									<b:else/>
+									<data:this.allBylineItems.comments.label/>
+								</b:if>
+							</strong>	
+
+							<button id="addNewcomment" data-id='addNewComment' class="btn btn-dark btn-sm py-0 commentActionButton d-none">
+								<data:messages.postAComment/>
+							</button>	
+						</div>										
+
+						<b:comment>
+							this Comment Location setting (Embed, Full, Or Popup)
+						</b:comment>
+
+
+						<b:if cond='data:post.embedCommentForm'>
+
+							<b:if cond='data:post.noNewCommentsText'>
+								<b:comment>new comment has disable from post setting (only work embed comment)</b:comment>
+								<div class='alert alert-warning my-3'>
+									<data:post.noNewCommentsText/>
+								</div>
+								<b:else/>	
+								<b:comment>postCommentEmbed</b:comment>
+								<a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+
+								<div id="commentFormWrapper">
+									<div id="commentForm">
+
+										<b:if cond='data:this.messages.blogComment'>
+											<div class='border rounded-2 px-2 py-2 my-1'>
+												<data:this.messages.blogComment/>
+											</div>
+										</b:if>
+
+										<b:comment>don't remove class name or the comment can't work</b:comment>
+										<iframe loading="lazy" allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:data-src='data:post.commentFormIframeSrc' scrolling='no' frameborder='0' id='comment-editor' name='comment-editor' width='100%'/>
+									</div>
+								</div>
+							</b:if>
+
+							<b:elseif cond='data:post.commentsUrl'/>
+
+							<b:if cond='data:post.commentsUrlOnclick'>
+								<b:comment>postCommentPopup</b:comment>
+								<a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+									<b:message name='messages.postAComment'/>
+								</a>
+								<b:else/>
+								<b:comment>postCommentFullPage</b:comment>
+								<a expr:href='data:post.commentsUrl'>
+									<b:message name='messages.postAComment'/>
+								</a>
+							</b:if>
+
+						</b:if>
+
+						<b:comment>this Comment Data</b:comment>
+						<b:if cond='data:post.numberOfComments > 0'>
+							<ul class="list-group">
+								<b:loop values='data:post.comments where (comment => not comment.inReplyTo or comment.inReplyTo == 0)' var='comment' reverse="true">
+									<li class="list-group-item d-flex gap-3 mb-2 border" expr:id='data:comment.anchorName'>
+										<div class="CommentLeft">
+											<b:if cond='data:comment.authorAvatarSrc != "//resources.blogblog.com/img/blank.gif"'>
+												<img class="rounded-circle" expr:src='data:comment.authorAvatarSrc ? resizeImage(data:comment.authorAvatarSrc, 35) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt="data:comment.author" width="35" height="35" />
+												<b:else/>
+												<img class="rounded-circle" src='https://www.blogger.com/img/blogger_logo_round_35.png' expr:alt="data:comment.author" width="35" height="35" />
+											</b:if>
+										</div>
+										<div class="commentRight w-100">
+											<div class="commentHeader d-flex justify-content-between align-items-center">
+												<p class="mb-1">
+													<data:comment.author/>
+												</p>
+												<span class="small">
+													<data:comment.timestamp/>
+												</span>
+											</div>
+											<div class="commentBody">
+
+												<p class="m-0 px-2 py-2 bg-app rounded-3 my-2 text-break">
+													<b:eval expr='data:comment.body snippet { links: false }'/>
+												</p>
+
+												<b:with value='data:post.comments where (commentReply => commentReply.inReplyTo == data:comment.id)' var='commentReply'>
+													<b:if cond='data:commentReply.size > 0'>
+														<ul class="list-group">
+															<b:loop values='data:commentReply' var='commentReply'>
+																<li class="list-group-item d-flex gap-3 mb-2 me-2 me-md-5 border" expr:id='data:commentReply.anchorName'>
+																	<div class="CommentLeft">
+																		<b:if cond='data:commentReply.authorAvatarSrc != "//resources.blogblog.com/img/blank.gif"'>
+																			<img class="rounded-circle" expr:src='data:commentReply.authorAvatarSrc ? resizeImage(data:commentReply.authorAvatarSrc, 35) : "https://www.blogger.com/img/blogger_logo_round_35.png"' expr:alt="data:commentReply.author" width="35" height="35" />
+																			<b:else/>
+																			<img class="rounded-circle" src='https://www.blogger.com/img/blogger_logo_round_35.png' expr:alt="data:comment.author" width="35" height="35" />
+																		</b:if>
+																		
+																	</div>
+																	<div class="commentRight w-100">
+																		<div class="commentHeader d-flex justify-content-between align-items-center">
+																			<p class="mb-1">
+																				<data:commentReply.author/>
+																			</p>
+																			<span class="small">
+																				<data:commentReply.timestamp/>
+																			</span>
+																		</div>
+																		<div class="commentBody">
+																			<p class="m-0 px-2 py-2 bg-app rounded-3 text-break">
+																				<b:eval expr='data:commentReply.body snippet { links: false }'/>
+																			</p>
+																		</div>
+																	</div>
+																</li>
+															</b:loop>
+														</ul>
+													</b:if>
+												</b:with>
+
+												<b:if cond='data:post.allowNewComments'>
+													<b:comment>this for reply button</b:comment>
+													<button expr:data-id='data:comment.id' class="btn btn-dark btn-sm py-0 commentActionButton">
+														<i class='bi bi-reply'></i>
+														<b:switch var='data:blog.locale'>
+															<b:case value='id'/>
+															Balas
+															<b:default/>
+															Reply
+														</b:switch>
+													</button>
+												</b:if>
+
+												<b:comment>this for reply formComment</b:comment>
+												<div class='me-2 me-md-5' expr:id='"form-container-" + data:comment.id'/>
+
+											</div>
+										</div>
+									</li>
+								</b:loop>										
+							</ul>	
+						</b:if>
+
+						<b:comment>show paging if have 200+ comment</b:comment>
+						<b:if cond='data:post.commentPagingRequired'>
+							<div class='d-flex justify-content-between'>
+								<span>
+									<data:post.commentRangeText/> <data:messages.comments/> 
+								</span>
+								<b:if cond='data:post.hasOlderLinks'>
+									<a class='text-decoration-none' expr:href='data:post.oldestLinkUrl fragment "postComment"'>
+										<data:messages.oldest/> <data:messages.comments/> 
+									</a>
+								</b:if>
+								<b:if cond='data:post.hasNewerLinks'>
+									<a class='text-decoration-none' expr:href='data:post.newerLinkUrl fragment "postComment"'>
+										<data:messages.newer/> <data:messages.comments/> 
+									</a>
+								</b:if>
+							</div>
+						</b:if>													
+
+					</div>
+				</b:includable>	
+			</b:widget>
+		</b:section>
+
+		<script>
+			//<![CDATA[
+			/* post comment */
+			function postComment()
+			{
+
+			/* check if have comment-editor element */
+			if ($("#comment-editor").length > 0) {
+
+			/* load commentPost */
+			$.getScript( "https://www.blogger.com/static/v1/jsbin/3262169375-comment_from_post_iframe.js", function( data, textStatus, jqxhr ) {
+			BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+
+			/* reply button */
+			let iframeSrc = $("#comment-editor").data('src').split('#');
+			$(".commentActionButton").on("click", function(){
+
+			/* get form data  */
+			let form = $("#commentForm"),
+			/* get id from this button */
+			id = $(this).data('id');
+
+			/* build iframe from current data */
+			let frame = $("#comment-editor"),
+			container = (id != "addNewComment") ? $('#form-container-' + id) : $("#commentFormWrapper");
+			frame.attr('src', (id != "addNewComment") ? iframeSrc[0] + '&parentID=' + id + '#' + iframeSrc[1] : iframeSrc[0] + '#' + iframeSrc[1]);
+
+			/* toggle addNewComment */
+			if (id != "addNewComment") {
+			$("#addNewcomment").removeClass('d-none');
+			}else{
+			$("#addNewcomment").addClass('d-none');
+			}
+
+			/* send iframe */
+			container.html(form);
+			})
+			});
+			}
+			}	
+
+			postComment();
+			//]]>	
+		</script>
+
+	</body>	
+</html>

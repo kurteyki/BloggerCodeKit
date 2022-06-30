@@ -1,0 +1,41 @@
+<b:if cond='data:blog.isMobileRequest'>	
+</b:if>
+
+<b:if cond='data:view.isHomepage'>	
+</b:if>
+
+<b:if cond='data:view.isPost'>	
+</b:if>
+
+<b:if cond='data:view.isPage'>	
+</b:if>
+
+<b:if cond='data:view.search.label'>	
+</b:if>
+
+<b:if cond='data:view.search.query'>	
+</b:if>
+
+<b:if cond='data:view.search and !data:view.search.label and !data:view.search.query'>	
+</b:if>
+
+<b:if cond='data:view.isArchive'>	
+</b:if>
+
+<b:if cond='data:view.isError'>	
+</b:if>
+
+<b:if cond='data:view.isSingleItem'>	
+</b:if>
+
+<b:if cond='data:view.isMultipleItems'>	
+</b:if>
+
+<b:if cond='data:view.isPreview'>	
+</b:if>
+
+<b:if cond='data:view.isLayoutMode'>	
+</b:if>
+
+<b:if cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}'>	
+</b:if>

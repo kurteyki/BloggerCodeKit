@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' 
-	b:templateUrl='TemplateName.xml' 
-	b:templateVersion='1.0' 
-	expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+<html b:css='false' b:js='true' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='TemplateName.xml' b:templateVersion='1.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale'>
+
 	<b:comment>Always remove Inject attribute with b:attr</b:comment>
 	<b:attr name='xmlns' value=''/>
 	<b:attr name='xmlns:b' value=''/>

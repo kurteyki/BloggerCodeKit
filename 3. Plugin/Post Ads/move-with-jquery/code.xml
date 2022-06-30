@@ -1,0 +1,39 @@
+<!-- target ads feed -->
+<b:if cond='not data:posts.empty AND not data:view.search.query AND data:x + 1 == data:posts.size'>
+	<div class='ads-target-feed'/>  
+</b:if>
+
+<!-- target ads bottom -->
+<div class='ads-target-post-bottom'/>
+
+<!-- ads widget -->
+<b:widget cond='data:view.isMultipleItems AND not data:view.isPreview AND not data:view.search.query' id='HTML555' locked='true' title='Ads Feed' type='HTML' version='2' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='content'><![CDATA[ads feed]]></b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>      
+		<div class='ads-horizontal ads-move-to-feed'>
+			<data:content/>
+		</div>   
+	</b:includable>
+</b:widget>
+<b:widget cond='data:view.isPost AND not data:view.search.query and not data:view.isPreview' id='HTML602' locked='true' title='Ads Post [Middle]' type='HTML' version='2' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='content'><![CDATA[ads middle]]></b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>      
+		<div class='ads-square ads-move-to-post-middle'>
+			<data:content/>
+		</div>
+	</b:includable>
+</b:widget>
+<b:widget cond='data:view.isPost AND not data:view.search.query and not data:view.isPreview' id='HTML603' locked='true' title='Ads Post [Bottom]' type='HTML' version='2' visible='true'>
+	<b:widget-settings>
+		<b:widget-setting name='content'><![CDATA[ads bottom]]></b:widget-setting>
+	</b:widget-settings>
+	<b:includable id='main'>      
+		<div class='ads-horizontal ads-move-to-post-bottom'>
+			<data:content/>
+		</div>
+	</b:includable>
+</b:widget>

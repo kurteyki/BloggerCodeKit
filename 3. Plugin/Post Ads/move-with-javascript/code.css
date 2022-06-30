@@ -1,0 +1,15 @@
+.adspost{display:block;width:100%;margin:0 auto 15px;text-align:center;} 
+.adspost.bottom{margin:15px auto} 
+.adspost.center{margin:15px auto;padding-top:10px} 
+.adspost.feed{width: auto;padding:0} 
+.adspost div,.adspost ins{margin:0 auto} 
+.ads-hr-r { width: 234px; height: 50px; } 
+.ads-kb-r { width: 250px; height: 250px; } 
+@media(min-width: 500px) { 
+    .ads-hr-r { width: 468px; height: 60px; }
+    .ads-kb-r { width: 300px; height: 250px; } 
+} 
+@media(min-width: 800px) { 
+    .ads-hr-r { width: 728px; height: 90px; }
+    .ads-kb-r { width: 336px; height: 280px; } 
+}
